@@ -1,0 +1,3250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://www.idylis.com/Idylisapi.asmx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://www.idylis.com/Idylisapi.asmx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.idylis.com/Idylisapi.asmx/">
+      <s:element name="CP_PurgerGrilleSaisie">
+        <s:complexType />
+      </s:element>
+      <s:element name="CP_PurgerGrilleSaisieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CP_PurgerGrilleSaisieResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SessionIDHeader" type="tns:SessionIDHeader" />
+      <s:complexType name="SessionIDHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="CP_PurgerGrilleSaisieSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CP_PurgerGrilleSaisieSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CP_PurgerGrilleSaisieSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CP_ValiderGrilleSaisie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_rapide" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CP_ValiderGrilleSaisieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CP_ValiderGrilleSaisieResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CP_ValiderGrilleSaisieSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_action" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_rapide" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CP_ValiderGrilleSaisieSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CP_ValiderGrilleSaisieSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderPiece">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_piece" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codepiece" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderPieceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GC_ValiderPieceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderPieceSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_piece" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codepiece" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderPieceSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GC_ValiderPieceSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthentificationAvec3Parametres1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codeAbonne" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_identifiant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_motdePasse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthentificationAvec3Parametres1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthentificationAvec3Parametres1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthentificationAvec4Parametres2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codeAbonne" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_identifiant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_motdePasse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeclientgere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthentificationAvec4Parametres2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthentificationAvec4Parametres2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthentificationAvec5Parametres3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codeAbonne" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_identifiant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_motdePasse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeclientgere" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomexercice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthentificationAvec5Parametres3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthentificationAvec5Parametres3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_Divalto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_hashkey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_idclient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_idutilisateur" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_vliasse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_iddossier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomdossier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_chemindivalto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_forme" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_capitalmt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_siret" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_naf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_adr1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_adr2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_adr3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codepostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ville" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_DivaltoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Authentification_DivaltoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_Divalto2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_hashkey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_idclient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_idutilisateur" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_vpaye" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_iddossier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomdossier" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_chemindivalto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_complementdivalto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_Divalto2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Authentification_Divalto2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_Revendeur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codeRevendeur" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_identifiant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_motdePasse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_RevendeurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Authentification_RevendeurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_Tiers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authentification_TiersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Authentification_TiersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeFournisseurs">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListeFournisseursResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeFournisseursResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheFournisseur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codeFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheFournisseurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FicheFournisseurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajFournisseur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajFournisseurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajFournisseurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationFournisseur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationFournisseurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreationFournisseurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeBDCAchat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dateDebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dateFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeBDCAchatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeBDCAchatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheBDCAchat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codeCommande" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheBDCAchatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FicheBDCAchatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajBDCAchat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheCommande" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajBDCAchatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajBDCAchatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationBDCAchat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheCommande" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationBDCAchatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreationBDCAchatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeFournisseursSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeFournisseursSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeFournisseursSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheFournisseurSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheFournisseurSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FicheFournisseurSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajFournisseurSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajFournisseurSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajFournisseurSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationFournisseurSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationFournisseurSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreationFournisseurSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeBDCAchatSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dateDebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dateFin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeFournisseur" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeBDCAchatSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeBDCAchatSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheBDCAchatSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeCommande" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FicheBDCAchatSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FicheBDCAchatSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajBDCAchatSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheCommande" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajBDCAchatSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajBDCAchatSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationBDCAchatSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ficheCommande" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreationBDCAchatSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreationBDCAchatSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeClientsGeres_AvecCompression">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListeClientsGeres_AvecCompressionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeClientsGeres_AvecCompressionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeClientsGeres">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListeClientsGeresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeClientsGeresResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3_AvecCompression">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3_AvecCompressionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche3_AvecCompressionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2_AvecCompression">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2_AvecCompressionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche2_AvecCompressionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1_AvecCompression">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1_AvecCompressionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche1_AvecCompressionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche1Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChercheTiers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_Nom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Telephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChercheTiersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChercheTiersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeClientsGeres_AvecCompressionSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeClientsGeres_AvecCompressionSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeClientsGeres_AvecCompressionSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeClientsGeresSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListeClientsGeresSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListeClientsGeresSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3_AvecCompressionSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3_AvecCompressionSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche3_AvecCompressionSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2_AvecCompressionSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2_AvecCompressionSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche2_AvecCompressionSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1_AvecCompressionSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1_AvecCompressionSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche1_AvecCompressionSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3Session">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codeanalytiquea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche3SessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche3SessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2Session">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptede" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_numerocomptea" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche2SessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche2SessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1Session">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datedebut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_datefin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Recherche1SessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Recherche1SessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChercheTiersSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_Nom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Telephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChercheTiersSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChercheTiersSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderImportPartenaires">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_typeImportation" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_typePiece" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderImportPartenairesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GC_ValiderImportPartenairesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderImportPartenairesSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_typeImportation" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_typePiece" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GC_ValiderImportPartenairesSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GC_ValiderImportPartenairesSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefinirModule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_codemodule" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefinirModuleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DefinirModuleSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codemodule" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DefinirModuleSessionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RefUtilisateur">
+        <s:complexType />
+      </s:element>
+      <s:element name="RefUtilisateurResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefUtilisateurResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefUtilisateurSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RefUtilisateurSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefUtilisateurSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ordre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_soustables" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_pieceattache" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_aveccompression" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LireTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ordre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_soustables" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LireTableJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ordre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_soustables" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_pieceattache" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_aveccompression" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LireTableSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableSansCData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ordre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_soustables" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_pieceattache" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_aveccompression" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableSansCDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LireTableSansCDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableSansCDataSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_ordre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_soustables" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_pieceattache" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_aveccompression" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LireTableSansCDataSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LireTableSansCDataSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajTableSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajTableSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajTableSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajDSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajDSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajDSNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajDSNSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajDSNSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajDSNSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajSousTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cNomSousTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cCleSousTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cCleSousTable2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajSousTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajSousTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajSousTableSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cNomSousTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cCleSousTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cCleSousTable2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MajSousTableSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MajSousTableSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsererTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsererTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsererTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsererTableSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_cFiche" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsererTableSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsererTableSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppresionTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_clevalue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppresionTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuppresionTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppresionTableSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_clevalue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppresionTableSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuppresionTableSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppressionDSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppressionDSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuppressionDSNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppressionDSNSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_sessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nomtable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_criteres" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuppressionDSNSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SuppressionDSNSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CP_PurgerGrilleSaisieSoapIn">
+    <wsdl:part name="parameters" element="tns:CP_PurgerGrilleSaisie" />
+  </wsdl:message>
+  <wsdl:message name="CP_PurgerGrilleSaisieSoapOut">
+    <wsdl:part name="parameters" element="tns:CP_PurgerGrilleSaisieResponse" />
+  </wsdl:message>
+  <wsdl:message name="CP_PurgerGrilleSaisieSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="CP_PurgerGrilleSaisieSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:CP_PurgerGrilleSaisieSession" />
+  </wsdl:message>
+  <wsdl:message name="CP_PurgerGrilleSaisieSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:CP_PurgerGrilleSaisieSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CP_ValiderGrilleSaisieSoapIn">
+    <wsdl:part name="parameters" element="tns:CP_ValiderGrilleSaisie" />
+  </wsdl:message>
+  <wsdl:message name="CP_ValiderGrilleSaisieSoapOut">
+    <wsdl:part name="parameters" element="tns:CP_ValiderGrilleSaisieResponse" />
+  </wsdl:message>
+  <wsdl:message name="CP_ValiderGrilleSaisieSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="CP_ValiderGrilleSaisieSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:CP_ValiderGrilleSaisieSession" />
+  </wsdl:message>
+  <wsdl:message name="CP_ValiderGrilleSaisieSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:CP_ValiderGrilleSaisieSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderPieceSoapIn">
+    <wsdl:part name="parameters" element="tns:GC_ValiderPiece" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderPieceSoapOut">
+    <wsdl:part name="parameters" element="tns:GC_ValiderPieceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderPieceSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderPieceSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:GC_ValiderPieceSession" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderPieceSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:GC_ValiderPieceSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthentificationAvec3Parametres1SoapIn">
+    <wsdl:part name="parameters" element="tns:AuthentificationAvec3Parametres1" />
+  </wsdl:message>
+  <wsdl:message name="AuthentificationAvec3Parametres1SoapOut">
+    <wsdl:part name="parameters" element="tns:AuthentificationAvec3Parametres1Response" />
+  </wsdl:message>
+  <wsdl:message name="AuthentificationAvec4Parametres2SoapIn">
+    <wsdl:part name="parameters" element="tns:AuthentificationAvec4Parametres2" />
+  </wsdl:message>
+  <wsdl:message name="AuthentificationAvec4Parametres2SoapOut">
+    <wsdl:part name="parameters" element="tns:AuthentificationAvec4Parametres2Response" />
+  </wsdl:message>
+  <wsdl:message name="AuthentificationAvec5Parametres3SoapIn">
+    <wsdl:part name="parameters" element="tns:AuthentificationAvec5Parametres3" />
+  </wsdl:message>
+  <wsdl:message name="AuthentificationAvec5Parametres3SoapOut">
+    <wsdl:part name="parameters" element="tns:AuthentificationAvec5Parametres3Response" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_DivaltoSoapIn">
+    <wsdl:part name="parameters" element="tns:Authentification_Divalto" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_DivaltoSoapOut">
+    <wsdl:part name="parameters" element="tns:Authentification_DivaltoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_Divalto2SoapIn">
+    <wsdl:part name="parameters" element="tns:Authentification_Divalto2" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_Divalto2SoapOut">
+    <wsdl:part name="parameters" element="tns:Authentification_Divalto2Response" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_RevendeurSoapIn">
+    <wsdl:part name="parameters" element="tns:Authentification_Revendeur" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_RevendeurSoapOut">
+    <wsdl:part name="parameters" element="tns:Authentification_RevendeurResponse" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_TiersSoapIn">
+    <wsdl:part name="parameters" element="tns:Authentification_Tiers" />
+  </wsdl:message>
+  <wsdl:message name="Authentification_TiersSoapOut">
+    <wsdl:part name="parameters" element="tns:Authentification_TiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeFournisseursSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeFournisseurs" />
+  </wsdl:message>
+  <wsdl:message name="ListeFournisseursSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeFournisseursResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeFournisseursSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="FicheFournisseurSoapIn">
+    <wsdl:part name="parameters" element="tns:FicheFournisseur" />
+  </wsdl:message>
+  <wsdl:message name="FicheFournisseurSoapOut">
+    <wsdl:part name="parameters" element="tns:FicheFournisseurResponse" />
+  </wsdl:message>
+  <wsdl:message name="FicheFournisseurSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="MajFournisseurSoapIn">
+    <wsdl:part name="parameters" element="tns:MajFournisseur" />
+  </wsdl:message>
+  <wsdl:message name="MajFournisseurSoapOut">
+    <wsdl:part name="parameters" element="tns:MajFournisseurResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajFournisseurSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreationFournisseurSoapIn">
+    <wsdl:part name="parameters" element="tns:CreationFournisseur" />
+  </wsdl:message>
+  <wsdl:message name="CreationFournisseurSoapOut">
+    <wsdl:part name="parameters" element="tns:CreationFournisseurResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreationFournisseurSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="ListeBDCAchatSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeBDCAchat" />
+  </wsdl:message>
+  <wsdl:message name="ListeBDCAchatSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeBDCAchatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeBDCAchatSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="FicheBDCAchatSoapIn">
+    <wsdl:part name="parameters" element="tns:FicheBDCAchat" />
+  </wsdl:message>
+  <wsdl:message name="FicheBDCAchatSoapOut">
+    <wsdl:part name="parameters" element="tns:FicheBDCAchatResponse" />
+  </wsdl:message>
+  <wsdl:message name="FicheBDCAchatSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="MajBDCAchatSoapIn">
+    <wsdl:part name="parameters" element="tns:MajBDCAchat" />
+  </wsdl:message>
+  <wsdl:message name="MajBDCAchatSoapOut">
+    <wsdl:part name="parameters" element="tns:MajBDCAchatResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajBDCAchatSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreationBDCAchatSoapIn">
+    <wsdl:part name="parameters" element="tns:CreationBDCAchat" />
+  </wsdl:message>
+  <wsdl:message name="CreationBDCAchatSoapOut">
+    <wsdl:part name="parameters" element="tns:CreationBDCAchatResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreationBDCAchatSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="ListeFournisseursSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeFournisseursSession" />
+  </wsdl:message>
+  <wsdl:message name="ListeFournisseursSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeFournisseursSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="FicheFournisseurSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:FicheFournisseurSession" />
+  </wsdl:message>
+  <wsdl:message name="FicheFournisseurSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:FicheFournisseurSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajFournisseurSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:MajFournisseurSession" />
+  </wsdl:message>
+  <wsdl:message name="MajFournisseurSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:MajFournisseurSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreationFournisseurSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreationFournisseurSession" />
+  </wsdl:message>
+  <wsdl:message name="CreationFournisseurSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreationFournisseurSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeBDCAchatSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeBDCAchatSession" />
+  </wsdl:message>
+  <wsdl:message name="ListeBDCAchatSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeBDCAchatSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="FicheBDCAchatSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:FicheBDCAchatSession" />
+  </wsdl:message>
+  <wsdl:message name="FicheBDCAchatSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:FicheBDCAchatSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajBDCAchatSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:MajBDCAchatSession" />
+  </wsdl:message>
+  <wsdl:message name="MajBDCAchatSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:MajBDCAchatSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreationBDCAchatSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreationBDCAchatSession" />
+  </wsdl:message>
+  <wsdl:message name="CreationBDCAchatSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreationBDCAchatSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeres_AvecCompressionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeres_AvecCompression" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeres_AvecCompressionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeres_AvecCompressionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeres_AvecCompressionSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeresSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeres" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeresSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeresSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3_AvecCompressionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche3_AvecCompression" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3_AvecCompressionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche3_AvecCompressionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3_AvecCompressionSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2_AvecCompressionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche2_AvecCompression" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2_AvecCompressionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche2_AvecCompressionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2_AvecCompressionSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1_AvecCompressionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche1_AvecCompression" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1_AvecCompressionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche1_AvecCompressionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1_AvecCompressionSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3SoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche3" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3SoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche3Response" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3SessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2SoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche2" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2SoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche2Response" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2SessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1SoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche1" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1SoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche1Response" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1SessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="ChercheTiersSoapIn">
+    <wsdl:part name="parameters" element="tns:ChercheTiers" />
+  </wsdl:message>
+  <wsdl:message name="ChercheTiersSoapOut">
+    <wsdl:part name="parameters" element="tns:ChercheTiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChercheTiersSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeres_AvecCompressionSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeres_AvecCompressionSession" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeres_AvecCompressionSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeres_AvecCompressionSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeresSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeresSession" />
+  </wsdl:message>
+  <wsdl:message name="ListeClientsGeresSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:ListeClientsGeresSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3_AvecCompressionSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche3_AvecCompressionSession" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3_AvecCompressionSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche3_AvecCompressionSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2_AvecCompressionSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche2_AvecCompressionSession" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2_AvecCompressionSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche2_AvecCompressionSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1_AvecCompressionSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche1_AvecCompressionSession" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1_AvecCompressionSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche1_AvecCompressionSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3SessionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche3Session" />
+  </wsdl:message>
+  <wsdl:message name="Recherche3SessionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche3SessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2SessionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche2Session" />
+  </wsdl:message>
+  <wsdl:message name="Recherche2SessionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche2SessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1SessionSoapIn">
+    <wsdl:part name="parameters" element="tns:Recherche1Session" />
+  </wsdl:message>
+  <wsdl:message name="Recherche1SessionSoapOut">
+    <wsdl:part name="parameters" element="tns:Recherche1SessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChercheTiersSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:ChercheTiersSession" />
+  </wsdl:message>
+  <wsdl:message name="ChercheTiersSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:ChercheTiersSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderImportPartenairesSoapIn">
+    <wsdl:part name="parameters" element="tns:GC_ValiderImportPartenaires" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderImportPartenairesSoapOut">
+    <wsdl:part name="parameters" element="tns:GC_ValiderImportPartenairesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderImportPartenairesSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderImportPartenairesSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:GC_ValiderImportPartenairesSession" />
+  </wsdl:message>
+  <wsdl:message name="GC_ValiderImportPartenairesSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:GC_ValiderImportPartenairesSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DefinirModuleSoapIn">
+    <wsdl:part name="parameters" element="tns:DefinirModule" />
+  </wsdl:message>
+  <wsdl:message name="DefinirModuleSoapOut">
+    <wsdl:part name="parameters" element="tns:DefinirModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="DefinirModuleSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="DefinirModuleSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:DefinirModuleSession" />
+  </wsdl:message>
+  <wsdl:message name="DefinirModuleSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:DefinirModuleSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefUtilisateurSoapIn">
+    <wsdl:part name="parameters" element="tns:RefUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="RefUtilisateurSoapOut">
+    <wsdl:part name="parameters" element="tns:RefUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="RefUtilisateurSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="RefUtilisateurSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:RefUtilisateurSession" />
+  </wsdl:message>
+  <wsdl:message name="RefUtilisateurSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:RefUtilisateurSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSoapIn">
+    <wsdl:part name="parameters" element="tns:LireTable" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSoapOut">
+    <wsdl:part name="parameters" element="tns:LireTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="LireTableJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:LireTableJSON" />
+  </wsdl:message>
+  <wsdl:message name="LireTableJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:LireTableJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="LireTableJSONSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:LireTableSession" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:LireTableSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSansCDataSoapIn">
+    <wsdl:part name="parameters" element="tns:LireTableSansCData" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSansCDataSoapOut">
+    <wsdl:part name="parameters" element="tns:LireTableSansCDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSansCDataSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSansCDataSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:LireTableSansCDataSession" />
+  </wsdl:message>
+  <wsdl:message name="LireTableSansCDataSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:LireTableSansCDataSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajTableSoapIn">
+    <wsdl:part name="parameters" element="tns:MajTable" />
+  </wsdl:message>
+  <wsdl:message name="MajTableSoapOut">
+    <wsdl:part name="parameters" element="tns:MajTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajTableSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="MajTableSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:MajTableSession" />
+  </wsdl:message>
+  <wsdl:message name="MajTableSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:MajTableSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajDSNSoapIn">
+    <wsdl:part name="parameters" element="tns:MajDSN" />
+  </wsdl:message>
+  <wsdl:message name="MajDSNSoapOut">
+    <wsdl:part name="parameters" element="tns:MajDSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajDSNSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="MajDSNSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:MajDSNSession" />
+  </wsdl:message>
+  <wsdl:message name="MajDSNSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:MajDSNSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajSousTableSoapIn">
+    <wsdl:part name="parameters" element="tns:MajSousTable" />
+  </wsdl:message>
+  <wsdl:message name="MajSousTableSoapOut">
+    <wsdl:part name="parameters" element="tns:MajSousTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="MajSousTableSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="MajSousTableSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:MajSousTableSession" />
+  </wsdl:message>
+  <wsdl:message name="MajSousTableSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:MajSousTableSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsererTableSoapIn">
+    <wsdl:part name="parameters" element="tns:InsererTable" />
+  </wsdl:message>
+  <wsdl:message name="InsererTableSoapOut">
+    <wsdl:part name="parameters" element="tns:InsererTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsererTableSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsererTableSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:InsererTableSession" />
+  </wsdl:message>
+  <wsdl:message name="InsererTableSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:InsererTableSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuppresionTableSoapIn">
+    <wsdl:part name="parameters" element="tns:SuppresionTable" />
+  </wsdl:message>
+  <wsdl:message name="SuppresionTableSoapOut">
+    <wsdl:part name="parameters" element="tns:SuppresionTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuppresionTableSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="SuppresionTableSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:SuppresionTableSession" />
+  </wsdl:message>
+  <wsdl:message name="SuppresionTableSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:SuppresionTableSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuppressionDSNSoapIn">
+    <wsdl:part name="parameters" element="tns:SuppressionDSN" />
+  </wsdl:message>
+  <wsdl:message name="SuppressionDSNSoapOut">
+    <wsdl:part name="parameters" element="tns:SuppressionDSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuppressionDSNSessionIDHeader">
+    <wsdl:part name="SessionIDHeader" element="tns:SessionIDHeader" />
+  </wsdl:message>
+  <wsdl:message name="SuppressionDSNSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:SuppressionDSNSession" />
+  </wsdl:message>
+  <wsdl:message name="SuppressionDSNSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:SuppressionDSNSessionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IdylisapiSoap">
+    <wsdl:operation name="CP_PurgerGrilleSaisie">
+      <wsdl:input message="tns:CP_PurgerGrilleSaisieSoapIn" />
+      <wsdl:output message="tns:CP_PurgerGrilleSaisieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CP_PurgerGrilleSaisieSession">
+      <wsdl:input message="tns:CP_PurgerGrilleSaisieSessionSoapIn" />
+      <wsdl:output message="tns:CP_PurgerGrilleSaisieSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CP_ValiderGrilleSaisie">
+      <wsdl:input message="tns:CP_ValiderGrilleSaisieSoapIn" />
+      <wsdl:output message="tns:CP_ValiderGrilleSaisieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CP_ValiderGrilleSaisieSession">
+      <wsdl:input message="tns:CP_ValiderGrilleSaisieSessionSoapIn" />
+      <wsdl:output message="tns:CP_ValiderGrilleSaisieSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderPiece">
+      <wsdl:input message="tns:GC_ValiderPieceSoapIn" />
+      <wsdl:output message="tns:GC_ValiderPieceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderPieceSession">
+      <wsdl:input message="tns:GC_ValiderPieceSessionSoapIn" />
+      <wsdl:output message="tns:GC_ValiderPieceSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="authentification1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec les paramètres : string _codeAbonne, string _identifiant, string _motdePasse</wsdl:documentation>
+      <wsdl:input name="AuthentificationAvec3Parametres1" message="tns:AuthentificationAvec3Parametres1SoapIn" />
+      <wsdl:output name="AuthentificationAvec3Parametres1" message="tns:AuthentificationAvec3Parametres1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="authentification2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec les paramètres : string _codeAbonne, string _identifiant, string _motdePasse, string _codeclientgere</wsdl:documentation>
+      <wsdl:input name="AuthentificationAvec4Parametres2" message="tns:AuthentificationAvec4Parametres2SoapIn" />
+      <wsdl:output name="AuthentificationAvec4Parametres2" message="tns:AuthentificationAvec4Parametres2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="authentification3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec les paramètres : string _codeAbonne, string _identifiant, string _motdePasse, string _codeclientgere, string _nomexercice</wsdl:documentation>
+      <wsdl:input name="AuthentificationAvec5Parametres3" message="tns:AuthentificationAvec5Parametres3SoapIn" />
+      <wsdl:output name="AuthentificationAvec5Parametres3" message="tns:AuthentificationAvec5Parametres3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Divalto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec les paramètres : string _hashkey, string _idclient, string _idutilisateur, string _vliasse, string _iddossier, string _nomdossier, string _chemindivalto, string _forme, string _capitalmt, string _siret, string _naf, string _adr1, string _adr2, string _adr3, string _codepostal, string _ville</wsdl:documentation>
+      <wsdl:input message="tns:Authentification_DivaltoSoapIn" />
+      <wsdl:output message="tns:Authentification_DivaltoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Divalto2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec les paramètres : string _hashkey, string _idclient, string _idutilisateur, string _vpaye, string _iddossier, string _nomdossier, string _chemindivalto, string _complementdivalto</wsdl:documentation>
+      <wsdl:input message="tns:Authentification_Divalto2SoapIn" />
+      <wsdl:output message="tns:Authentification_Divalto2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="authentification_Revendeur">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec les paramètres : string _codeRevendeur, string _identifiant, string _motdePasse</wsdl:documentation>
+      <wsdl:input name="Authentification_Revendeur" message="tns:Authentification_RevendeurSoapIn" />
+      <wsdl:output name="Authentification_Revendeur" message="tns:Authentification_RevendeurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Tiers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authentification avec le paramètre : string _token</wsdl:documentation>
+      <wsdl:input message="tns:Authentification_TiersSoapIn" />
+      <wsdl:output message="tns:Authentification_TiersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeFournisseurs">
+      <wsdl:input message="tns:ListeFournisseursSoapIn" />
+      <wsdl:output message="tns:ListeFournisseursSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FicheFournisseur">
+      <wsdl:input message="tns:FicheFournisseurSoapIn" />
+      <wsdl:output message="tns:FicheFournisseurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajFournisseur">
+      <wsdl:input message="tns:MajFournisseurSoapIn" />
+      <wsdl:output message="tns:MajFournisseurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreationFournisseur">
+      <wsdl:input message="tns:CreationFournisseurSoapIn" />
+      <wsdl:output message="tns:CreationFournisseurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeBDCAchat">
+      <wsdl:input message="tns:ListeBDCAchatSoapIn" />
+      <wsdl:output message="tns:ListeBDCAchatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FicheBDCAchat">
+      <wsdl:input message="tns:FicheBDCAchatSoapIn" />
+      <wsdl:output message="tns:FicheBDCAchatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajBDCAchat">
+      <wsdl:input message="tns:MajBDCAchatSoapIn" />
+      <wsdl:output message="tns:MajBDCAchatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreationBDCAchat">
+      <wsdl:input message="tns:CreationBDCAchatSoapIn" />
+      <wsdl:output message="tns:CreationBDCAchatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeFournisseursSession">
+      <wsdl:input message="tns:ListeFournisseursSessionSoapIn" />
+      <wsdl:output message="tns:ListeFournisseursSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FicheFournisseurSession">
+      <wsdl:input message="tns:FicheFournisseurSessionSoapIn" />
+      <wsdl:output message="tns:FicheFournisseurSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajFournisseurSession">
+      <wsdl:input message="tns:MajFournisseurSessionSoapIn" />
+      <wsdl:output message="tns:MajFournisseurSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreationFournisseurSession">
+      <wsdl:input message="tns:CreationFournisseurSessionSoapIn" />
+      <wsdl:output message="tns:CreationFournisseurSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeBDCAchatSession">
+      <wsdl:input message="tns:ListeBDCAchatSessionSoapIn" />
+      <wsdl:output message="tns:ListeBDCAchatSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FicheBDCAchatSession">
+      <wsdl:input message="tns:FicheBDCAchatSessionSoapIn" />
+      <wsdl:output message="tns:FicheBDCAchatSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajBDCAchatSession">
+      <wsdl:input message="tns:MajBDCAchatSessionSoapIn" />
+      <wsdl:output message="tns:MajBDCAchatSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreationBDCAchatSession">
+      <wsdl:input message="tns:CreationBDCAchatSessionSoapIn" />
+      <wsdl:output message="tns:CreationBDCAchatSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres_AvecCompression">
+      <wsdl:input message="tns:ListeClientsGeres_AvecCompressionSoapIn" />
+      <wsdl:output message="tns:ListeClientsGeres_AvecCompressionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres">
+      <wsdl:input message="tns:ListeClientsGeresSoapIn" />
+      <wsdl:output message="tns:ListeClientsGeresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3_AvecCompression">
+      <wsdl:input message="tns:Recherche3_AvecCompressionSoapIn" />
+      <wsdl:output message="tns:Recherche3_AvecCompressionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2_AvecCompression">
+      <wsdl:input message="tns:Recherche2_AvecCompressionSoapIn" />
+      <wsdl:output message="tns:Recherche2_AvecCompressionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1_AvecCompression">
+      <wsdl:input message="tns:Recherche1_AvecCompressionSoapIn" />
+      <wsdl:output message="tns:Recherche1_AvecCompressionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3">
+      <wsdl:input message="tns:Recherche3SoapIn" />
+      <wsdl:output message="tns:Recherche3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2">
+      <wsdl:input message="tns:Recherche2SoapIn" />
+      <wsdl:output message="tns:Recherche2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1">
+      <wsdl:input message="tns:Recherche1SoapIn" />
+      <wsdl:output message="tns:Recherche1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChercheTiers">
+      <wsdl:input message="tns:ChercheTiersSoapIn" />
+      <wsdl:output message="tns:ChercheTiersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres_AvecCompressionSession">
+      <wsdl:input message="tns:ListeClientsGeres_AvecCompressionSessionSoapIn" />
+      <wsdl:output message="tns:ListeClientsGeres_AvecCompressionSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeresSession">
+      <wsdl:input message="tns:ListeClientsGeresSessionSoapIn" />
+      <wsdl:output message="tns:ListeClientsGeresSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3_AvecCompressionSession">
+      <wsdl:input message="tns:Recherche3_AvecCompressionSessionSoapIn" />
+      <wsdl:output message="tns:Recherche3_AvecCompressionSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2_AvecCompressionSession">
+      <wsdl:input message="tns:Recherche2_AvecCompressionSessionSoapIn" />
+      <wsdl:output message="tns:Recherche2_AvecCompressionSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1_AvecCompressionSession">
+      <wsdl:input message="tns:Recherche1_AvecCompressionSessionSoapIn" />
+      <wsdl:output message="tns:Recherche1_AvecCompressionSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3Session">
+      <wsdl:input message="tns:Recherche3SessionSoapIn" />
+      <wsdl:output message="tns:Recherche3SessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2Session">
+      <wsdl:input message="tns:Recherche2SessionSoapIn" />
+      <wsdl:output message="tns:Recherche2SessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1Session">
+      <wsdl:input message="tns:Recherche1SessionSoapIn" />
+      <wsdl:output message="tns:Recherche1SessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChercheTiersSession">
+      <wsdl:input message="tns:ChercheTiersSessionSoapIn" />
+      <wsdl:output message="tns:ChercheTiersSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderImportPartenaires">
+      <wsdl:input message="tns:GC_ValiderImportPartenairesSoapIn" />
+      <wsdl:output message="tns:GC_ValiderImportPartenairesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderImportPartenairesSession">
+      <wsdl:input message="tns:GC_ValiderImportPartenairesSessionSoapIn" />
+      <wsdl:output message="tns:GC_ValiderImportPartenairesSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DefinirModule">
+      <wsdl:input message="tns:DefinirModuleSoapIn" />
+      <wsdl:output message="tns:DefinirModuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DefinirModuleSession">
+      <wsdl:input message="tns:DefinirModuleSessionSoapIn" />
+      <wsdl:output message="tns:DefinirModuleSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefUtilisateur">
+      <wsdl:input message="tns:RefUtilisateurSoapIn" />
+      <wsdl:output message="tns:RefUtilisateurSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RefUtilisateurSession">
+      <wsdl:input message="tns:RefUtilisateurSessionSoapIn" />
+      <wsdl:output message="tns:RefUtilisateurSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTable">
+      <wsdl:input message="tns:LireTableSoapIn" />
+      <wsdl:output message="tns:LireTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTableJSON">
+      <wsdl:input message="tns:LireTableJSONSoapIn" />
+      <wsdl:output message="tns:LireTableJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSession">
+      <wsdl:input message="tns:LireTableSessionSoapIn" />
+      <wsdl:output message="tns:LireTableSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSansCData">
+      <wsdl:input message="tns:LireTableSansCDataSoapIn" />
+      <wsdl:output message="tns:LireTableSansCDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSansCDataSession">
+      <wsdl:input message="tns:LireTableSansCDataSessionSoapIn" />
+      <wsdl:output message="tns:LireTableSansCDataSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajTable">
+      <wsdl:input message="tns:MajTableSoapIn" />
+      <wsdl:output message="tns:MajTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajTableSession">
+      <wsdl:input message="tns:MajTableSessionSoapIn" />
+      <wsdl:output message="tns:MajTableSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajDSN">
+      <wsdl:input message="tns:MajDSNSoapIn" />
+      <wsdl:output message="tns:MajDSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajDSNSession">
+      <wsdl:input message="tns:MajDSNSessionSoapIn" />
+      <wsdl:output message="tns:MajDSNSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajSousTable">
+      <wsdl:input message="tns:MajSousTableSoapIn" />
+      <wsdl:output message="tns:MajSousTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MajSousTableSession">
+      <wsdl:input message="tns:MajSousTableSessionSoapIn" />
+      <wsdl:output message="tns:MajSousTableSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererTable">
+      <wsdl:input message="tns:InsererTableSoapIn" />
+      <wsdl:output message="tns:InsererTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsererTableSession">
+      <wsdl:input message="tns:InsererTableSessionSoapIn" />
+      <wsdl:output message="tns:InsererTableSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppresionTable">
+      <wsdl:input message="tns:SuppresionTableSoapIn" />
+      <wsdl:output message="tns:SuppresionTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppresionTableSession">
+      <wsdl:input message="tns:SuppresionTableSessionSoapIn" />
+      <wsdl:output message="tns:SuppresionTableSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppressionDSN">
+      <wsdl:input message="tns:SuppressionDSNSoapIn" />
+      <wsdl:output message="tns:SuppressionDSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuppressionDSNSession">
+      <wsdl:input message="tns:SuppressionDSNSessionSoapIn" />
+      <wsdl:output message="tns:SuppressionDSNSessionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IdylisapiSoap" type="tns:IdylisapiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CP_PurgerGrilleSaisie">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_PurgerGrilleSaisie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CP_PurgerGrilleSaisieSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CP_PurgerGrilleSaisieSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_PurgerGrilleSaisieSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CP_ValiderGrilleSaisie">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_ValiderGrilleSaisie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CP_ValiderGrilleSaisieSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CP_ValiderGrilleSaisieSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_ValiderGrilleSaisieSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderPiece">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderPiece" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GC_ValiderPieceSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderPieceSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderPieceSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification1">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/AuthentificationAvec3Parametres1" style="document" />
+      <wsdl:input name="AuthentificationAvec3Parametres1">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthentificationAvec3Parametres1">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification2">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/AuthentificationAvec4Parametres2" style="document" />
+      <wsdl:input name="AuthentificationAvec4Parametres2">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthentificationAvec4Parametres2">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification3">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/AuthentificationAvec5Parametres3" style="document" />
+      <wsdl:input name="AuthentificationAvec5Parametres3">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthentificationAvec5Parametres3">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Divalto">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Divalto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Divalto2">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Divalto2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification_Revendeur">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Revendeur" style="document" />
+      <wsdl:input name="Authentification_Revendeur">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Authentification_Revendeur">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Tiers">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Tiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeFournisseurs">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeFournisseurs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListeFournisseursSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheFournisseur">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheFournisseur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FicheFournisseurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajFournisseur">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajFournisseur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MajFournisseurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationFournisseur">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationFournisseur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreationFournisseurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeBDCAchat">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeBDCAchat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListeBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheBDCAchat">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheBDCAchat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:FicheBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajBDCAchat">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajBDCAchat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MajBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationBDCAchat">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationBDCAchat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreationBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeFournisseursSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeFournisseursSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheFournisseurSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheFournisseurSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajFournisseurSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajFournisseurSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationFournisseurSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationFournisseurSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeBDCAchatSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheBDCAchatSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajBDCAchatSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationBDCAchatSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres_AvecCompression">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeres_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListeClientsGeres_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListeClientsGeresSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3_AvecCompression">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Recherche3_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2_AvecCompression">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Recherche2_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1_AvecCompression">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Recherche1_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Recherche3SessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Recherche2SessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:Recherche1SessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChercheTiers">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ChercheTiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChercheTiersSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres_AvecCompressionSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeres_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeresSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeresSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3_AvecCompressionSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2_AvecCompressionSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1_AvecCompressionSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3Session">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3Session" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2Session">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2Session" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1Session">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1Session" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChercheTiersSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ChercheTiersSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderImportPartenaires">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderImportPartenaires" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GC_ValiderImportPartenairesSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderImportPartenairesSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderImportPartenairesSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefinirModule">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/DefinirModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DefinirModuleSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefinirModuleSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/DefinirModuleSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefUtilisateur">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/RefUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RefUtilisateurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefUtilisateurSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/RefUtilisateurSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTable">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LireTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableJSON">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LireTableJSONSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSansCData">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableSansCData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LireTableSansCDataSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSansCDataSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableSansCDataSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajTable">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MajTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajTableSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajTableSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajDSN">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajDSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MajDSNSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajDSNSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajDSNSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajSousTable">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajSousTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:MajSousTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajSousTableSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajSousTableSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsererTable">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/InsererTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:InsererTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsererTableSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/InsererTableSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppresionTable">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppresionTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SuppresionTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppresionTableSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppresionTableSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppressionDSN">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppressionDSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SuppressionDSNSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppressionDSNSession">
+      <soap:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppressionDSNSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IdylisapiSoap12" type="tns:IdylisapiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CP_PurgerGrilleSaisie">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_PurgerGrilleSaisie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CP_PurgerGrilleSaisieSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CP_PurgerGrilleSaisieSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_PurgerGrilleSaisieSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CP_ValiderGrilleSaisie">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_ValiderGrilleSaisie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CP_ValiderGrilleSaisieSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CP_ValiderGrilleSaisieSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CP_ValiderGrilleSaisieSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderPiece">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderPiece" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GC_ValiderPieceSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderPieceSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderPieceSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification1">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/AuthentificationAvec3Parametres1" style="document" />
+      <wsdl:input name="AuthentificationAvec3Parametres1">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthentificationAvec3Parametres1">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification2">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/AuthentificationAvec4Parametres2" style="document" />
+      <wsdl:input name="AuthentificationAvec4Parametres2">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthentificationAvec4Parametres2">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification3">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/AuthentificationAvec5Parametres3" style="document" />
+      <wsdl:input name="AuthentificationAvec5Parametres3">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthentificationAvec5Parametres3">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Divalto">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Divalto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Divalto2">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Divalto2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="authentification_Revendeur">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Revendeur" style="document" />
+      <wsdl:input name="Authentification_Revendeur">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Authentification_Revendeur">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentification_Tiers">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Authentification_Tiers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeFournisseurs">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeFournisseurs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListeFournisseursSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheFournisseur">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheFournisseur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FicheFournisseurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajFournisseur">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajFournisseur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MajFournisseurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationFournisseur">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationFournisseur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreationFournisseurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeBDCAchat">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeBDCAchat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListeBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheBDCAchat">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheBDCAchat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:FicheBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajBDCAchat">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajBDCAchat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MajBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationBDCAchat">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationBDCAchat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreationBDCAchatSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeFournisseursSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeFournisseursSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheFournisseurSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheFournisseurSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajFournisseurSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajFournisseurSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationFournisseurSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationFournisseurSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeBDCAchatSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FicheBDCAchatSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/FicheBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajBDCAchatSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreationBDCAchatSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/CreationBDCAchatSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres_AvecCompression">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeres_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListeClientsGeres_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListeClientsGeresSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3_AvecCompression">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Recherche3_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2_AvecCompression">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Recherche2_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1_AvecCompression">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1_AvecCompression" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Recherche1_AvecCompressionSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Recherche3SessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Recherche2SessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:Recherche1SessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChercheTiers">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ChercheTiers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChercheTiersSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeres_AvecCompressionSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeres_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListeClientsGeresSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ListeClientsGeresSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3_AvecCompressionSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2_AvecCompressionSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1_AvecCompressionSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1_AvecCompressionSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche3Session">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche3Session" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche2Session">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche2Session" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recherche1Session">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/Recherche1Session" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChercheTiersSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/ChercheTiersSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderImportPartenaires">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderImportPartenaires" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GC_ValiderImportPartenairesSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GC_ValiderImportPartenairesSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/GC_ValiderImportPartenairesSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefinirModule">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/DefinirModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DefinirModuleSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DefinirModuleSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/DefinirModuleSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefUtilisateur">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/RefUtilisateur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RefUtilisateurSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefUtilisateurSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/RefUtilisateurSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTable">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LireTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableJSON">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LireTableJSONSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSansCData">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableSansCData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LireTableSansCDataSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LireTableSansCDataSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/LireTableSansCDataSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajTable">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MajTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajTableSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajTableSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajDSN">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajDSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MajDSNSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajDSNSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajDSNSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajSousTable">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajSousTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:MajSousTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MajSousTableSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/MajSousTableSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsererTable">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/InsererTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:InsererTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsererTableSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/InsererTableSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppresionTable">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppresionTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SuppresionTableSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppresionTableSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppresionTableSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppressionDSN">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppressionDSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SuppressionDSNSessionIDHeader" part="SessionIDHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuppressionDSNSession">
+      <soap12:operation soapAction="https://www.idylis.com/Idylisapi.asmx/SuppressionDSNSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Idylisapi">
+    <wsdl:port name="IdylisapiSoap" binding="tns:IdylisapiSoap">
+      <soap:address location="http://exe.dailybiz.com/idylisapi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IdylisapiSoap12" binding="tns:IdylisapiSoap12">
+      <soap12:address location="http://exe.dailybiz.com/idylisapi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
