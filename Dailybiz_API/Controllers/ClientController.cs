@@ -51,9 +51,26 @@ namespace Dailybiz_API.Controllers
         }
 
         // PUT v1/client
-        public void PutClient()
-        {
 
+        // Ajouter un client
+        public string AddClient(string cXml)
+        {
+           string cRetour = API.idev.InsererTable(cXml);
+           return cRetour;
+        }
+
+        // Supprimer un client
+        public string DeleteClient(string idClient)
+        {
+            string cRetour = API.idev.SuppresionTable("FB_Clients", idClient);
+            return cRetour;
+        }
+
+        // Mettre à jour un client
+        public string UpdateClient(string cXml)
+        {
+            string cRetour = API.idev.MajTable(cXml);
+            return cRetour;
         }
     }
 }
