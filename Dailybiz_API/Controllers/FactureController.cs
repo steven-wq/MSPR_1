@@ -52,6 +52,36 @@ namespace Dailybiz_API.Controllers
 
             return json;
         }
+        
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Facture Page";
+            GetFacture("blabla");
+            return View();
+        }
+
+        // PUT v1/Facture
+
+        // Ajouter une Facture
+        public string AddFacture(string cXml)
+        {
+            string cRetour = API.idev.InsererTable(cXml);
+            return cRetour;
+        }
+
+        // Supprimer une Facture
+        public string DeleteFacture(string idFacture)
+        {
+            string cRetour = API.idev.SuppresionTable("FA_FACTURES", idFacture);
+            return cRetour;
+        }
+
+        // Mettre à jour une Facture
+        public string UpdateFacture(string cXml)
+        {
+            string cRetour = API.idev.MajTable(cXml);
+            return cRetour;
+        }
 
     }
 }
